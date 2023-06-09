@@ -4,10 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to employee wage Problem");
-
-            EmployeeWage employee = new EmployeeWage();
-            employee.EmployeeAttendence();
+            Console.WriteLine("Welcome to employee wage Problem");            
 
 
         }
