@@ -11,20 +11,21 @@ namespace Employee_Wages_Day1
 
         public void EmployeeAttendence()
         {
+            int Max_Days = 20;
+            int Max_Hours = 100;
+            int Wage_Per_hrs = 20;
             int EmpHrs = 0;
-            int total_Work_Hour = 0;
-            int Wage_Per_Hour = 20;
-            int total_Salary = 0;
 
-            int Total_Days = 20;
+            int Total_Wage = 0;
 
-            for (int day = 1; day <= Total_Days; day++)
+            int Total_Work_Hour = 0;
+            int day = 1;
+
+            while (day <= Max_Days && Total_Work_Hour <= Max_Hours)
             {
 
                 Random random = new Random();
-                int num = random.Next(3);
-
-
+                int num = random.Next(0,3);
 
                 switch (num)
                 {
@@ -43,14 +44,15 @@ namespace Employee_Wages_Day1
                         EmpHrs = 8;
                         break;
                 }
-                total_Work_Hour = (total_Work_Hour + EmpHrs);
+                day++;
+                Total_Work_Hour = (Total_Work_Hour + EmpHrs);
 
-                total_Salary = (total_Work_Hour * Wage_Per_Hour);
+                Total_Wage = (Total_Work_Hour * Wage_Per_hrs);
             }
 
-            Console.WriteLine("Total working hour in a Month " + total_Work_Hour);
+            Console.WriteLine("Total working hour in a Month " + Total_Work_Hour);
 
-            Console.WriteLine("Total salary for a month  " + total_Salary);
+            Console.WriteLine("Total salary for a month  " + Total_Wage);
 
 
 
