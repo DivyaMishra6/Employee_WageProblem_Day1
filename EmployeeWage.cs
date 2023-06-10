@@ -11,33 +11,35 @@ namespace Employee_Wages_Day1
 
         public void EmployeeAttendence()
         {
-            int IS_FULL_TIME = 1;
-            int IS_PART_TIME = 2;
-
-            int EMP_RATE_PER_HOUR = 20;
-
             int empHrs = 0;
             int empWage = 0;
+            int EMP_RATE_PER_HOUR = 20;
 
             Random random = new Random();
 
-            int empCheck = random.Next(0,3);
+            int empCheck = random.Next(3);
 
-            if (empCheck == IS_FULL_TIME)
+            switch (empCheck)
             {
-                empHrs = 8;
+                case 0:
+                    Console.WriteLine("Employee is Absent");
+                    empHrs = 0;
+                    break;
+
+                case 1:
+                    Console.WriteLine("Employee is Present for Full Time");
+                    empHrs = 8;
+                    break;
+
+                case 2:
+                    Console.WriteLine("Employee is Present For Part Time");
+                    empHrs = 4;
+                    break;
             }
-            
-            else if (empCheck == IS_PART_TIME)
-            {
-                empHrs = 4;
-            }
-            
-            else
-            {
-                empHrs = 0;
-            }
+
+
             empWage = empHrs * EMP_RATE_PER_HOUR;
+
 
             Console.WriteLine("Emp Wage :" + empWage);
         }
