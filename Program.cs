@@ -8,25 +8,27 @@
 
             // Compute Employee wages for multiple Company
 
-            Console.WriteLine("Enter the name of the company Dmart or Relince:");
-            string company = Console.ReadLine();
-
-            EmployeeWage wage = new EmployeeWage();
-            if (company == "Dmart")
+            Console.WriteLine("Enter the company Name : \n1. Dmart\n2.Reliance");
+            int company = Convert.ToInt32(Console.ReadLine());
+            EmpWageBuilderObject obj = new EmpWageBuilderObject();
+            switch (company)
             {
-                wage.ComputeEmpWage(company, 20, 10, 90);
-            }
-            else if (company == "Relince") 
-            {
-                wage.ComputeEmpWage(company, 20, 10, 90);
-            }
-            else 
-            {
-                Console.WriteLine("Please enter correct company!!"); 
-            }
+                case 1:
+                    obj.EmpWageBuilder1();
+                    obj.ComputeEmpWage();
+                    break;
+                case 2:
+                    obj.EmpWageBuilder2();
+                    obj.ComputeEmpWage();
+                    break;
 
+                default:
+                    Console.WriteLine("Enter a valid company!!!");
+                    break;
 
+            }
         }
+
     }
 
 
