@@ -10,10 +10,8 @@ namespace Employee_Wages_Day1
     {
         public const int isFullTime = 1;
         public const int isPartTime = 2;
-        public const int EmpRatePerHr = 20;
-        public const int NumOfWorkingDays = 20;
-        public const int MaxHrInMonth = 100;
-        public int ComputeEmpWage()
+       
+        public int ComputeEmpWage(string company, int EmpRatePerHr, int NumOfWorkingDays, int MaxHrInMonth)
         {
 
 
