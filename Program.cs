@@ -7,7 +7,7 @@
             Console.WriteLine("Welcome to employee wage Problem");
 
             EmployeeWage wage = new EmployeeWage();
-            wage.EmployeeAttendence();
+            wage.ComputeEmpWage();
                
 
         }
